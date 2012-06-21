@@ -8,17 +8,14 @@ Configure a GitHub's Hubot over a VM using Vagrant and Chef.
 = REQUIREMENTS:
 
   VMBox installed.
-
   Vagrant installed.
 
 Cookbooks: 
 
-  mkdir cookbooks
-
-  cd cookbooks
-
-  git clone https://github.com/librato/nodejs-cookbook.git
-  git clone https://github.com/opscode-cookbooks/build-essential.git
+  $mkdir cookbooks
+  $cd cookbooks
+  $git clone https://github.com/librato/nodejs-cookbook.git
+  $git clone https://github.com/opscode-cookbooks/build-essential.git
 
 == Platform:
 
@@ -28,11 +25,8 @@ Tested on Debian.
 = USAGE:
 
   $ vagrant box add base http://files.vagrantup.com/lucid32.box
-
   $ vagrant init
-
   $ vagrant up
-
   $ vagrant ssh
 
 = LICENSE and AUTHOR:
