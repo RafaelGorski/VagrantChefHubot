@@ -20,6 +20,8 @@ Include the Hubot recipe to install node from source on your system:
 
   include_recipe "hubot"
 
+This recipe was initially design to run using Vagrant, include the recipe to Vagrantfile on ˜/ directory.
+
 = LICENSE and AUTHOR:
 
 Author:: Rafael Gorski (rafael@adaptlean.com.br)
