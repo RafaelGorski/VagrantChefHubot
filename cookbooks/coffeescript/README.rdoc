@@ -6,13 +6,7 @@ Installs CoffeeScript using npm(Node.JS).
 
 == Platform:
 
-Tested on Debian Lenny. Should work fine on Ubuntu, Centos, etc.
-
-== Cookbooks:
-
-Opscode cookbooks (http://github.com/opscode/cookbooks/tree/master)
-
-* build-essential
+Tested on Debian Lucid 32.
 
 AdaptLean cookbooks (https://github.com/AdaptLean)
 

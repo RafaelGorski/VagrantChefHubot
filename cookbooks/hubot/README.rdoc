@@ -1,6 +1,6 @@
 = DESCRIPTION:
 
-Installs Hubot from npm.
+Installs Hubot using npm.
 
 = REQUIREMENTS:
 
