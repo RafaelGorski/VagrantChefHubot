@@ -15,7 +15,7 @@ Vagrant::Config.run do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "base-lucid32"
+  config.vm.box = "lucid32"
 
 
     # Enable and configure the chef solo provisioner
@@ -30,7 +30,7 @@ Vagrant::Config.run do |config|
       chef.add_recipe "nodejs"
       chef.json = {
           "nodejs" => {
-          "version" => "0.6.19"
+          "version" => "0.8.4"
           }
       }
      

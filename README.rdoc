@@ -1,9 +1,10 @@
-
 *** Under Development ***
 
 = DESCRIPTION:
 
 Configure a GitHub's Hubot over a VM using Vagrant and Chef.
+The proposal is to load an instance of GitHub's Hubot inside of Vagrant machine.
+
 
 = REQUIREMENTS:
 
@@ -29,11 +30,21 @@ Tested on Debian.
   $ vagrant up
   $ vagrant ssh
 
+After use, in order to stop de VM use:
+  $ vagrant destroy
+
+
+== Configurations
+
+ Check the Vagrantfile to update the last versions of node.
+ http://nodejs.org/dist/latest/
+
+
 = LICENSE and AUTHOR:
 
-Author:: Rafael Gorski (rafael@adaptlean.com.br)
+Author:: Rafael Gorski (rafael_gorski@hotmail.com)
 
-Copyright:: 2012, AdaptLean.com.br 
+Copyright:: 2012 
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
