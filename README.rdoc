@@ -42,10 +42,13 @@ After use, in order to stop de VM use:
 
 = LICENSE and AUTHOR:
 
+<<<<<<< HEAD
 Author:: Rafael Gorski (rafael_gorski@hotmail.com)
 
 Copyright:: 2012 
 
+=======
+>>>>>>> 9c5d11c8b8cdc9e0156f1ec662848ee0ff19c2d0
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
