@@ -1,34 +1,61 @@
-*** Under Development ***
+= WTF? 
 
-= DESCRIPTION:
+It is my concept project to learn Vagrant and Chef and future CoffeeScript and Node.
 
-Configure a GitHub's Hubot over a VM using Vagrant and Chef.
-The proposal is to load an instance of GitHub's Hubot inside of Vagrant machine.
+= What it does?
+
+Configure a GitHub's Hubot in a VM using Vagrant and Chef.
+The proposal is to load an instance of GitHub's Hubot inside of Vagrant VM machine.
 
 
-= REQUIREMENTS:
+= PRE REQUIREMENTS:
 
+  Git installed.
   VMBox installed.
   Vagrant installed.
 
-Cookbooks: 
+= Installation
+ 
+ $ git clone https://github.com/RafaelGorski/VagrantChefHubot.git 
+ 
 
-  $mkdir cookbooks
-  $cd cookbooks
-  $git clone https://github.com/librato/nodejs-cookbook.git
-  $git clone https://github.com/opscode-cookbooks/build-essential.git
+After you clone this repository download the following Cookbooks: 
+
+  $ mkdir cookbooks
+  $ cd cookbooks
+  $ git clone https://github.com/librato/nodejs-cookbook.git
+  $ git clone https://github.com/opscode-cookbooks/build-essential.git
+
+Add your Campfire information:
+  Edit the Vagrantfile and change all variables *CAMPFIRE*
+
 
 == Platform:
 
-Tested on Debian.
+Tested on Debian lucid32.
 
 
 = USAGE:
+
+Starting the Vagrant VM:
 
   $ vagrant box add base http://files.vagrantup.com/lucid32.box
   $ vagrant init
   $ vagrant up
   $ vagrant ssh
+  $ ./postinstall.sh    <-- not mandatory
+
+Starting Hubot:
+
+  $ cd cd /usr/local/src/node_modules/hubot
+  $ bin/hubot -a campfire
+
+Check reply from Campfire:
+  login to camp fire
+  type: hubot ping
+  Expected reply from Hubot: PONG
+
+
 
 After use, in order to stop de VM use:
   $ vagrant destroy
@@ -36,8 +63,11 @@ After use, in order to stop de VM use:
 
 == Configurations
 
- Check the Vagrantfile to update the last versions of node.
+Check the Vagrantfile to update the last versions of node.
  http://nodejs.org/dist/latest/
+
+In case you are using the Node 0.8, be aware of the following pull request pending:
+ https://github.com/github/hubot/pull/325
 
 
 = LICENSE and AUTHOR:

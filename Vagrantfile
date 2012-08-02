@@ -1,22 +1,27 @@
 # Before vagrant up:
-# 
-# mkdir cookbooks
-# cd cookbooks
-# git clone https://github.com/librato/nodejs-cookbook.git
-# git clone https://github.com/opscode-cookbooks/build-essential.git
-#
-
+#   mkdir cookbooks
+#   cd cookbooks
+#   git clone https://github.com/librato/nodejs-cookbook.git
+#   git clone https://github.com/opscode-cookbooks/build-essential.git
+# TODO:
+#   setup PORT variable
+#   setup $PATH  
+#   define if need REDIS or NOT
+#   install extra pkg https://github.com/github/hubot-scripts.git
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
 Vagrant::Config.run do |config|
-  # All Vagrant configuration is done here. The most common configuration
-  # options are documented and commented below. For a complete reference,
-  # please see the online documentation at vagrantup.com.
+    # All Vagrant configuration is done here. The most common configuration
+    # options are documented and commented below. For a complete reference,
+    # please see the online documentation at vagrantup.com.
 
-  # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "lucid32"
+    # Every Vagrant virtual environment requires a box to build off of.
+    config.vm.box = "lucid32"
+    config.vm.box_url = "http://files.vagrantup.com/lucid32.box"
 
+    config.vm.network :hostonly, "10.11.12.13"
+    config.vm.host_name = "hubot"
 
     # Enable and configure the chef solo provisioner
     config.vm.provision :chef_solo do |chef|
@@ -39,9 +44,34 @@ Vagrant::Config.run do |config|
      chef.add_recipe "hubot"
      chef.add_recipe "git"
      chef.add_recipe "coffeescript"
-
-
     end 
+  
+    config.vm.provision :shell do |shell|
+      shell.inline = "echo $1 >> /etc/profile"
+      shell.args = "'export PATH=\"/usr/local/src/node_modules/.bin:$PATH\"'"
+    end
+    
+    config.vm.provision :shell do |shell|
+      shell.inline = "echo $1 >> /etc/profile"
+      shell.args = "'export PORT=8984'"
+    end
+    
+    config.vm.provision :shell do |shell|
+      shell.inline = "echo $1 >> /etc/profile"
+      shell.args = "'export HUBOT_CAMPFIRE_TOKEN=\"insert-token-campfire\"'"
+    end
+    
+    config.vm.provision :shell do |shell|
+      shell.inline = "echo $1 >> /etc/profile"
+      shell.args = "'export HUBOT_CAMPFIRE_ROOMS=\"insert-room-number\"'"
+    end
+    
+    config.vm.provision :shell do |shell|
+      shell.inline = "echo $1 >> /etc/profile"
+      shell.args = "'export HUBOT_CAMPFIRE_ACCOUNT=\"insert-name-of-your-campfire-area\"'"
+    end
+  
+  
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
   # config.vm.box_url = "http://domain.com/path/to/above.box"
