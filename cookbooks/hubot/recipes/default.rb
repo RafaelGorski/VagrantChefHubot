@@ -1,9 +1,9 @@
 #
-# Author:: Rafael Gorski ( rafael@adaptlean.com.br) 
+# Author:: Rafael Gorski  
 # Cookbook Name:: hubot 
 # Recipe:: default
 #
-# Copyright 20122, AdaptLean.com.br 
+# Copyright 2012 
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.

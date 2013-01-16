@@ -24,9 +24,9 @@ This recipe was initially design to run using Vagrant, include the recipe to Vag
 
 = LICENSE and AUTHOR:
 
-Author:: Rafael Gorski (rafael@adaptlean.com.br)
+Author:: Rafael Gorski 
 
-Copyright:: 2012, AdaptLean.com.br 
+Copyright:: 2012 
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
