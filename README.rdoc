@@ -1,12 +1,12 @@
 = WTF? 
 
-It is my concept project to learn Vagrant and Chef and future CoffeeScript and Node.
+It is a Vagrant configuration in Chef Solo to boot a Hubot using Skype as GUI.
 
 = What it does?
 
 Configure a GitHub's Hubot in a VM using Vagrant and Chef.
 The proposal is to load an instance of GitHub's Hubot inside of Vagrant VM machine.
-
+Use skype as gui to request things to Hubot.
 
 = PRE REQUIREMENTS:
 
@@ -26,13 +26,12 @@ After you clone this repository download the following Cookbooks:
   $ git clone https://github.com/librato/nodejs-cookbook.git
   $ git clone https://github.com/opscode-cookbooks/build-essential.git
 
-Add your Campfire information:
-  Edit the Vagrantfile and change all variables *CAMPFIRE*
-
+Change configuration to your Skype account
+WIP
 
 == Platform:
 
-Tested on Debian lucid32.
+Tested on 
 
 
 = USAGE:
