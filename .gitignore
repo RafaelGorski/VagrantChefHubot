@@ -1,3 +1,7 @@
 /cookbooks/build-essential/
 /cookbooks/git/
 /cookbooks/nodejs/
+*.swp
+.Vagrantfile.swp
+.DS_store
+npm-debug.log
