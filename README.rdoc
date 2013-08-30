@@ -17,7 +17,6 @@ Use skype as gui to request things to Hubot.
 = Installation
  
  $ git clone https://github.com/RafaelGorski/VagrantChefHubot.git 
- 
 
 After you clone this repository download the following Cookbooks: 
 
@@ -31,8 +30,7 @@ WIP
 
 == Platform:
 
-Tested on 
-
+Tested on Precise 32 
 
 = USAGE:
 
@@ -42,23 +40,31 @@ Starting the Vagrant VM:
   $ vagrant init
   $ vagrant up
   $ vagrant ssh
-  $ ./postinstall.sh    <-- not mandatory
 
 Starting Hubot:
 
-  $ cd cd /usr/local/src/node_modules/hubot
+  $ cd /usr/local/src/node_modules/hubot
   $ bin/hubot -a campfire
 
-Check reply from Campfire:
-  login to camp fire
+= Manual Test
+  Login to Skype
+  Open the contact configured
   type: hubot ping
   Expected reply from Hubot: PONG
-
-
 
 After use, in order to stop de VM use:
   $ vagrant destroy
 
+== TODO
+  setup Skype connector
+  update cookbooks versions
+  setup PORT variable
+  setup $PATH
+  define if need REDIS or NOT
+  install extra pkg https://github.com/github/hubot-scripts.git
+  finalize tests
+  make trello board for management new improvements
+  test other environments
 
 == Configurations
 
@@ -71,19 +77,5 @@ In case you are using the Node 0.8, be aware of the following pull request pendi
 
 = LICENSE and AUTHOR:
 
-Author:: Rafael Gorski (rafael_gorski@hotmail.com)
-
-Copyright:: 2012 
-
-=======
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+Author:: Rafael Gorski (rafaelgorski.com | @GorskiRafael)
+No license attached, if you like it, make reference to my me @GorskiRafael

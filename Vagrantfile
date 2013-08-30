@@ -8,6 +8,9 @@
 #   setup $PATH  
 #   define if need REDIS or NOT
 #   install extra pkg https://github.com/github/hubot-scripts.git
+#   update cookbooks versions
+#   finalize tests
+#
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
