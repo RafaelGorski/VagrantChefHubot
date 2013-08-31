@@ -3,5 +3,7 @@
 /cookbooks/nodejs/
 *.swp
 .Vagrantfile.swp
+.vagrant
+.vagrant*
 .DS_store
 npm-debug.log

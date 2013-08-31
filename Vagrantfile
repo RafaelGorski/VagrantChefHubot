@@ -16,14 +16,15 @@
 
 Vagrant.configure("2") do |config|
 
-    config.vm.box = "precise32"
-    config.vm.box_url = "http://files.vagrantup.com/precise32.box"
+    config.vm.box = "lucid32"
+    config.vm.box_url = "http://files.vagrantup.com/lucid32.box"
     #config.vm.network :hostonly, "10.11.12.13"
-    #config.vm.host_name = "solari"
+    #config.vm.host_name = "Hubot"
 
     config.vm.provision :chef_solo do |chef|
       chef.log_level = :debug
       chef.add_recipe "git"
+      chef.add_recipe "apt"
       chef.add_recipe "nodejs"
       chef.add_recipe "nodejs::npm"
       chef.add_recipe "coffeescript"

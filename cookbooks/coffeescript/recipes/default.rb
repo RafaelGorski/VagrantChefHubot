@@ -7,6 +7,6 @@ bash "install coffeescript using npm" do
   cwd "/usr/local/src"
   user "root"
   code <<-EOH
-    npm install coffee-script
+   npm install -g coffee-script 
   EOH
 end
