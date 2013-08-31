@@ -28,23 +28,15 @@ After you clone this repository download the following Cookbooks:
 Change configuration to your Skype account
 WIP
 
-== Platform:
-
-Tested on Precise 32 
-
-= USAGE:
-
 Starting the Vagrant VM:
 
-  $ vagrant box add base http://files.vagrantup.com/lucid32.box
-  $ vagrant init
   $ vagrant up
   $ vagrant ssh
 
 Starting Hubot:
 
   $ cd /usr/local/src/node_modules/hubot
-  $ bin/hubot -a campfire
+  $ bin/hubot -a skype 
 
 = Manual Test
   Login to Skype
