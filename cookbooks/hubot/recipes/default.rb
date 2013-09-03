@@ -8,6 +8,6 @@ bash "install hubot using npm" do
   cwd "/usr/local/src"
   user "root"
   code <<-EOH
-    npm install hubot
+    npm install -g hubot
   EOH
 end

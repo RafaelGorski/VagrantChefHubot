@@ -1,4 +1,4 @@
-= WTF? 
+= What is this? 
 
 It is a Vagrant configuration in Chef Solo to boot a Hubot using Skype as GUI.
 
@@ -32,31 +32,31 @@ Starting the Vagrant VM:
 
   $ vagrant up
   $ vagrant ssh
-
-Starting Hubot:
-
-  $ cd /usr/local/src/node_modules/hubot
-  $ bin/hubot -a skype 
+  $ hubot -a skype 
 
 = Manual Test
-  Login to Skype
-  Open the contact configured
-  type: hubot ping
-  Expected reply from Hubot: PONG
+
+  Versions
+    git --version;node --version;npm --version;coffee --version
+
+  Hubot
+    Login to Skype
+    Open the contact configured
+    type: hubot ping
+    Expected reply from Hubot: PONG
 
 After use, in order to stop de VM use:
   $ vagrant destroy
 
 == TODO
   setup Skype connector
-  update cookbooks versions
   setup PORT variable
-  setup $PATH
   define if need REDIS or NOT
   install extra pkg https://github.com/github/hubot-scripts.git
   finalize tests
   make trello board for management new improvements
   test other environments
+  install hubot-control
 
 == Configurations
 

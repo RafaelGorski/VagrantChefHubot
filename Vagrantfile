@@ -1,15 +1,12 @@
+# 
+# Configuration file to set parameters and packages on the VM produced by Vagrant
+# Author: Rafael Gorski (rafaelgorski.com)
+#
 # Before vagrant up:
 #   mkdir cookbooks
 #   cd cookbooks
 #   git clone https://github.com/librato/nodejs-cookbook.git
 #   git clone https://github.com/opscode-cookbooks/build-essential.git
-# TODO:
-#   setup PORT variable
-#   setup $PATH  
-#   define if need REDIS or NOT
-#   install extra pkg https://github.com/github/hubot-scripts.git
-#   update cookbooks versions
-#   finalize tests
 #
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
@@ -28,8 +25,11 @@ Vagrant.configure("2") do |config|
       chef.add_recipe "nodejs"
       chef.add_recipe "nodejs::npm"
       chef.add_recipe "coffeescript"
+      chef.add_recipe "hubot"
 
     end
+
+    config.vm.provision :shell, :path => "bash_provisioning.sh"
 
     config.ssh.max_tries = "50000"
     #config.ssh.timeout = "3000000"
