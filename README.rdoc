@@ -1,6 +1,6 @@
 = What is this? 
 
-It is a Vagrant configuration in Chef Solo to boot a Hubot using Skype as GUI.
+It is a Vagrant configuration in Chef Solo to boot a Hubot(http://hubot.github.com) using Skype as GUI.
 
 = What it does?
 
