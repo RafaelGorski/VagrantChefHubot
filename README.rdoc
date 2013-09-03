@@ -10,9 +10,9 @@ Use skype as gui to request things to Hubot.
 
 = PRE REQUIREMENTS:
 
-  Git installed.
-  VMBox installed.
-  Vagrant installed.
+  Git installed.  --> http://git-scm.com/book/en/Getting-Started-Installing-Git
+  VMBox installed. --> https://www.virtualbox.org
+  Vagrant installed. --> http://www.vagrantup.com
 
 = Installation
  
