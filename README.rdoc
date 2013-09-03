@@ -48,7 +48,7 @@ Starting the Vagrant VM:
     Expected reply from Hubot: PONG
 
 After use, in order to stop de VM use:
-  $ vagrant destroy
+  $ vagrant halt 
 
 == TODO
   setup Skype connector
