@@ -15,8 +15,8 @@ Vagrant.configure("2") do |config|
 
     config.vm.box = "lucid32"
     config.vm.box_url = "http://files.vagrantup.com/lucid32.box"
-    #config.vm.network :hostonly, "10.11.12.13"
-    #config.vm.host_name = "Hubot"
+    config.vm.hostname = "hubot.local"
+    config.vm.network :private_network, ip: "10.0.1.20"
 
     config.vm.provision :chef_solo do |chef|
       chef.log_level = :debug
@@ -26,11 +26,9 @@ Vagrant.configure("2") do |config|
       chef.add_recipe "nodejs::npm"
       chef.add_recipe "coffeescript"
       chef.add_recipe "hubot"
-
     end
 
     config.vm.provision :shell, :path => "bash_provisioning.sh"
-
     config.ssh.max_tries = "50000"
     #config.ssh.timeout = "3000000"
 end

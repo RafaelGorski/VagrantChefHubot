@@ -33,15 +33,19 @@ WIP
 Starting the Vagrant VM:
 
   $ vagrant up
-  $ vagrant ssh
-  $ hubot -a skype 
+  
+  $ ssh -X vagrant@10.0.1.20
+  $ passwd: vagrant
+
+  $ skype &
+  $ hubot -a skype & 
 
 = Manual Test
 
   Versions
     git --version;node --version;npm --version;coffee --version
 
-  Hubot
+  From client  
     Login to Skype
     Open the contact configured
     type: hubot ping
@@ -51,9 +55,6 @@ After use, in order to stop de VM use:
   $ vagrant halt 
 
 == TODO
-  setup Skype connector
-  setup PORT variable
-  define if need REDIS or NOT
   install extra pkg https://github.com/github/hubot-scripts.git
   finalize tests
   make trello board for management new improvements

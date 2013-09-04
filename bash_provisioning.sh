@@ -6,8 +6,6 @@
 # Author: Rafael Gorski ( @GorskiRafael |  rafaelgorski.com )
 # References
 # https://help.ubuntu.com/community/Skype
-#
-
 
 # Skype
 sudo apt-get install -y python-software-properties
@@ -18,6 +16,4 @@ sudo apt-get install -y skype;
 # Skype connector for Hubot
 sudo apt-get install -y python-setuptools;
 sudo easy_install Skype4Py;
-sudo git clone https://github.com/netpro2k/hubot-skype.git
-
-
+npm install -g hubot-skype
