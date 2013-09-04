@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 #
 # Provisioning using bash for vagrant.
-# Update the apt repositories and fetch and install skype
+# Update the apt repositories and fetch and install skype and dependencies
+# For dev proposals vim and vim bundles are available
 #
 # Author: Rafael Gorski ( @GorskiRafael |  rafaelgorski.com )
-# References
+# References:
 # https://help.ubuntu.com/community/Skype
 
 # Skype
@@ -16,4 +17,29 @@ sudo apt-get install -y skype;
 # Skype connector for Hubot
 sudo apt-get install -y python-setuptools;
 sudo easy_install Skype4Py;
-npm install -g hubot-skype
+
+#npm install -g hubot-skype
+git clone https://github.com/netpro2k/hubot-skype.git;
+cp hubot-skype/src/* /usr/local/lib/node_modules/hubot/src/adapters;
+cp -rf hubot-skype/ /usr/local/lib/node_modules/hubot/node_modules;
+
+#navigation helper
+ln -s /usr/local/lib/node_modules/hubot;
+
+#vim
+sudo apt-get install -y vim;
+
+# Vim package manager using phantongen
+mkdir -p .vim/autoload .vim/bundle;
+curl -Sso .vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim;
+
+#tpope vim sensible
+git clone git://github.com/tpope/vim-sensible.git .vim/bundle/vim-sensible
+
+# coffeescript vim plugin
+git clone https://github.com/kchmck/vim-coffee-script.git .vim/bundle/vim-coffee-script/
+
+# vimrc
+echo "execute pathogen#infect()" >> .vimrc;
+echo "syntax on" >> .vimrc;
+echo "filetype plugin indent on" >> .vimrc;

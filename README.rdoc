@@ -1,12 +1,13 @@
 = What is this? 
 
-It is a Vagrant configuration in Chef Solo to boot a {Hubot}[http://hubot.github.com] using {Skype}[https://github.com/netpro2k/hubot-skype] as transport.
+It is Hubot using Skype ready to go!!!
+An Easy way to use hubot in your company.
 
 = What it does?
 
-Configure a GitHub's Hubot in a VM using Vagrant and Chef.
-The proposal is to load an instance of GitHub's Hubot inside of Vagrant VM machine.
-Use skype as gui to request things to Hubot.
+Generate a VM with Hubot and Skype available out of box.
+Install all OS dependencies like git, python, vim...
+Move all files to right place according to installation guides.
 
 = PRE REQUIREMENTS:
 
@@ -27,9 +28,6 @@ After you clone this repository download the following Cookbooks:
   $ git clone https://github.com/librato/nodejs-cookbook.git
   $ git clone https://github.com/opscode-cookbooks/build-essential.git
 
-Change configuration to your Skype account
-WIP
-
 Starting the Vagrant VM:
 
   $ vagrant up
@@ -42,9 +40,6 @@ Starting the Vagrant VM:
 
 = Manual Test
 
-  Versions
-    git --version;node --version;npm --version;coffee --version
-
   From client  
     Login to Skype
     Open the contact configured
@@ -56,19 +51,8 @@ After use, in order to stop de VM use:
 
 == TODO
   install extra pkg https://github.com/github/hubot-scripts.git
-  finalize tests
   make trello board for management new improvements
-  test other environments
   install hubot-control
-
-== Configurations
-
-Check the Vagrantfile to update the last versions of node.
- http://nodejs.org/dist/latest/
-
-In case you are using the Node 0.8, be aware of the following pull request pending:
- https://github.com/github/hubot/pull/325
-
 
 = LICENSE and AUTHOR:
 
