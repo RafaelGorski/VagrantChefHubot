@@ -39,6 +39,11 @@ Starting the Vagrant VM:
   $ passwd: vagrant
 
   $ skype &
+
+  login to skype client, before start hubot
+
+
+  $ cd hubot
   $ hubot -a skype & 
 
 = Manual Test
