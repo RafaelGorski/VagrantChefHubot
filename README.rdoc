@@ -35,7 +35,7 @@ Starting the Vagrant VM:
 
   $ vagrant up
   
-  $ ssh -X vagrant@10.0.1.20
+  $ ssh -Y vagrant@10.0.1.20
   $ passwd: vagrant
 
   $ skype &
