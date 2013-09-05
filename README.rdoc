@@ -28,7 +28,7 @@ After you clone this repository download the following Cookbooks:
   $ git clone https://github.com/librato/nodejs-cookbook.git
   $ git clone https://github.com/opscode-cookbooks/build-essential.git
   $ git clone https://github.com/opscode-cookbooks/git.git
-  $ git clone ttps://github.com/opscode-cookbooks/apt.git
+  $ git clone https://github.com/opscode-cookbooks/apt.git
 
 
 Starting the Vagrant VM:
@@ -56,6 +56,7 @@ After use, in order to stop de VM use:
   install extra pkg https://github.com/github/hubot-scripts.git
   make trello board for management new improvements
   install hubot-control
+  automatic cookbooks dependency
 
 = LICENSE and AUTHOR:
 
