@@ -13,7 +13,7 @@ sudo apt-get install -y python-software-properties;
 sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner";
 sudo apt-get update;
 sudo apt-get install -y skype;
-sudo apt-get install curl;
+sudo apt-get install -y curl;
 
 # Skype connector for Hubot
 sudo apt-get install -y python-setuptools;
