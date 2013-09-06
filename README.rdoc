@@ -19,8 +19,14 @@ Version 4.2.16
 {Vagrant}[http://www.vagrantup.com] installed
 Vagrant version 1.2.7
 
+Install X11 (for macosx , windows)
+ - For Mac: http://xquartz.macosforge.org/landing/
+ - For Windows: http://sourceforge.net/projects/xming/
+
 = Installation
  
+ If Windows start Xming.
+
  $ git clone https://github.com/RafaelGorski/VagrantChefHubot.git 
 
 After you clone this repository download the following Cookbooks: 
