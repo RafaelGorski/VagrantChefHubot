@@ -14,8 +14,10 @@ Move all files to right place according to installation guides.
 {Git}[http://git-scm.com/book/en/Getting-Started-Installing-Git] installed
 
 {VMBox}[https://www.virtualbox.org] installed
+Version 4.2.16
 
 {Vagrant}[http://www.vagrantup.com] installed
+Vagrant version 1.2.7
 
 = Installation
  

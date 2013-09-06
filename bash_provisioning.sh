@@ -9,10 +9,11 @@
 # https://help.ubuntu.com/community/Skype
 
 # Skype
-sudo apt-get install -y python-software-properties
+sudo apt-get install -y python-software-properties;
 sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner";
 sudo apt-get update;
 sudo apt-get install -y skype;
+sudo apt-get install curl;
 
 # Skype connector for Hubot
 sudo apt-get install -y python-setuptools;
@@ -34,7 +35,7 @@ mkdir -p .vim/autoload .vim/bundle;
 curl -Sso .vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim;
 
 #tpope vim sensible
-git clone git://github.com/tpope/vim-sensible.git .vim/bundle/vim-sensible
+git clone git://github.com/tpope/vim-sensible.git .vim/bundle/vim-sensible;
 
 # coffeescript vim plugin
 git clone https://github.com/kchmck/vim-coffee-script.git .vim/bundle/vim-coffee-script/
