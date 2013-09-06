@@ -60,7 +60,6 @@ After use, in order to stop de VM use:
 
 == Tested on
 - MacOSx
-- Windows 7
 
 == TODO
   install extra pkg https://github.com/github/hubot-scripts.git
