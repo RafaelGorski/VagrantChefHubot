@@ -25,33 +25,33 @@ Install X11 (for macosx , windows)
 
 = Installation
  
- If Windows start Xming.
+If Windows start Xming.
 
- $ git clone https://github.com/RafaelGorski/VagrantChefHubot.git 
+  git clone https://github.com/RafaelGorski/VagrantChefHubot.git 
 
 After you clone this repository download the following Cookbooks: 
 
-cd cookbooks;
-git clone https://github.com/librato/nodejs-cookbook.git nodejs;
-git clone https://github.com/opscode-cookbooks/build-essential.git;
-git clone https://github.com/opscode-cookbooks/git.git;
-git clone https://github.com/opscode-cookbooks/apt.git;
+  cd cookbooks;
+  git clone https://github.com/librato/nodejs-cookbook.git nodejs;
+  git clone https://github.com/opscode-cookbooks/build-essential.git;
+  git clone https://github.com/opscode-cookbooks/git.git;
+  git clone https://github.com/opscode-cookbooks/apt.git;
 
 TIP: You can run a helper script cookbooks/cookbooks-update.sh or bat
 
 Starting the Vagrant VM:
 
-vagrant up;
-ssh -Y vagrant@10.0.1.20;
-#passwd: vagrant
+  vagrant up;
+  ssh -Y vagrant@10.0.1.20;
+  #passwd: vagrant
 
-skype &;
+  skype &;
 
-#login to skype client, before start hubot
+  #login to skype client, before start hubot
 
 
-cd hubot;
-hubot -a skype &; 
+  cd hubot;
+  hubot -a skype &; 
 
 = Manual Test
 
@@ -62,10 +62,11 @@ hubot -a skype &;
     Expected reply from Hubot: PONG
 
 After use, in order to stop de VM use:
-  $ vagrant halt 
+  vagrant halt 
 
 == Tested on
 - MacOSx
+- Windows 7
 
 == TODO
   install extra pkg https://github.com/github/hubot-scripts.git
@@ -76,4 +77,4 @@ After use, in order to stop de VM use:
 = LICENSE and AUTHOR:
 
 Author:: Rafael Gorski (rafaelgorski.com | @GorskiRafael)
-No license attached, if you like it, make reference to my me @GorskiRafael
+No license attached, if you like it, make reference to my me, or fork, star this repo || @GorskiRafael
