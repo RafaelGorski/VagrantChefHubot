@@ -49,13 +49,13 @@ Starting the Vagrant VM:
 
   #login to skype client, before start hubot
 
-
   cd hubot;
   hubot -a skype &; 
+  # a modal gui will be prompted from skype, accept it. 
 
 = Manual Test
 
-  From client  
+  From client (Not same skype lauched in previous screen)
     Login to Skype
     Open the contact configured
     type: hubot ping
