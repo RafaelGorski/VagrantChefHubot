@@ -19,14 +19,10 @@ Version 4.2.16
 {Vagrant}[http://www.vagrantup.com] installed
 Vagrant version 1.2.7
 
-Install X11 (for macosx , windows)
- - For Mac: http://xquartz.macosforge.org/landing/
- - For Windows: http://sourceforge.net/projects/xming/
+Install X11 client {for Mac}[http://xquartz.macosforge.org/landing/] and {for Windows}[http://sourceforge.net/projects/xming/]
 
 = Installation
  
-If Windows start Xming.
-
   git clone https://github.com/RafaelGorski/VagrantChefHubot.git 
 
 After you clone this repository download the following Cookbooks: 
@@ -41,6 +37,8 @@ TIP: You can run a helper script cookbooks/cookbooks-update.sh or bat
 
 Starting the Vagrant VM:
 
+  #If Windows start Xming client.
+
   vagrant up;
   ssh -Y vagrant@10.0.1.20;
   #passwd: vagrant
@@ -51,7 +49,7 @@ Starting the Vagrant VM:
 
   cd hubot;
   hubot -a skype &; 
-  # a modal gui will be prompted from skype, accept it. 
+  # a modal gui will be prompted from skype, accept/allow it. 
 
 = Manual Test
 
