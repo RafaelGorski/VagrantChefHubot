@@ -9,7 +9,7 @@ Generate a VM with Hubot and Skype available out of box.
 Install all OS dependencies like git, python, vim...
 Move all files to right place according to installation guides.
 
-= PRE REQUIREMENTS:
+= PRE REQUIREMENTS installed in your machine:
 
 {Git}[http://git-scm.com/book/en/Getting-Started-Installing-Git] installed
 
@@ -19,7 +19,10 @@ Version 4.2.16
 {Vagrant}[http://www.vagrantup.com] installed
 Vagrant version 1.2.7
 
-Install X11 client {for Mac}[http://xquartz.macosforge.org/landing/] and {for Windows}[http://sourceforge.net/projects/xming/]
+X11 client Installed {for Mac}[http://xquartz.macosforge.org/landing/] and {for Windows}[http://sourceforge.net/projects/xming/]
+
+{Oracle OCI}[http://download.oracle.com/otn/linux/instantclient/11203/oracle-instantclient11.2-basic-11.2.0.3.0-1.x86_64.rpm] Installed
+Need a oracle account
 
 = Installation
  
