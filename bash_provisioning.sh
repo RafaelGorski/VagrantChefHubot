@@ -45,4 +45,15 @@ echo "execute pathogen#infect()" >> .vimrc;
 echo "syntax on" >> .vimrc;
 echo "filetype plugin indent on" >> .vimrc;
 
+# Oracle OCI Installation
+# https://github.com/mariano/node-db-oracle
+sudo apt-get install alien;
+sudo alien -i oracle-instantclient11.2-basic-11.2.0.3.0-1.x86_64.rpm;
+sudo alien -i oracle-instantclient11.2-sqlplus-11.2.0.3.0-1.x86_64.rpm;
+sudo alien -i oracle-instantclient11.2-devel-11.2.0.3.0-1.x86_64.rpm;
+sudo apt-get install libaio;
+export OCI_INCLUDE_DIR=/opt/instantclient/sdk/include/;
+export OCI_LIB_DIR=/opt/instantclient;
+npm install db-oracle;
+export LD_LIBRARY_PATH=/opt/instantclient;
 

@@ -22,12 +22,20 @@ Vagrant version 1.2.7
 X11 client Installed {for Mac}[http://xquartz.macosforge.org/landing/] and {for Windows}[http://sourceforge.net/projects/xming/]
 
 {Oracle OCI}[http://download.oracle.com/otn/linux/instantclient/11203/oracle-instantclient11.2-basic-11.2.0.3.0-1.x86_64.rpm] Installed
+  oracle-instantclient11.2-basic-11.2.0.3.0-1.x86_64.rpm
+  oracle-instantclient11.2-devel-11.2.0.3.0-1.x86_64.rpm
+  oracle-instantclient11.2-sqlplus-11.2.0.3.0-1.x86_64.rpm
 Need a oracle account
 
 = Installation
- 
+
+1)
+Copy all OCI rpm files to folder "shared_folder"
+
+2)
   git clone https://github.com/RafaelGorski/VagrantChefHubot.git 
 
+3)
 After you clone this repository download the following Cookbooks: 
 
   cd cookbooks;

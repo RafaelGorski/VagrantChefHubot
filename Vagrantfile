@@ -28,6 +28,8 @@ Vagrant.configure("2") do |config|
       chef.add_recipe "hubot"
     end
 
+    config.vm.synced_folder "shared_folder", "/tmp/shared_folder"
+    
     config.vm.provision :shell, :path => "bash_provisioning.sh"
     config.ssh.max_tries = "50000"
     #config.ssh.timeout = "3000000"
