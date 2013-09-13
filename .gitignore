@@ -2,3 +2,4 @@
 .vagrant*
 .DS_store
 npm-debug.log
+shared_folder/*

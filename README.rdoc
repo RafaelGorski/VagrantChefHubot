@@ -21,7 +21,7 @@ Vagrant version 1.2.7
 
 X11 client Installed {for Mac}[http://xquartz.macosforge.org/landing/] and {for Windows}[http://sourceforge.net/projects/xming/]
 
-{Oracle OCI}[http://download.oracle.com/otn/linux/instantclient/11203/oracle-instantclient11.2-basic-11.2.0.3.0-1.x86_64.rpm] Installed
+{Oracle OCI}[http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html] Installed
   oracle-instantclient11.2-basic-11.2.0.3.0-1.x86_64.rpm
   oracle-instantclient11.2-devel-11.2.0.3.0-1.x86_64.rpm
   oracle-instantclient11.2-sqlplus-11.2.0.3.0-1.x86_64.rpm
