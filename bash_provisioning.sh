@@ -47,13 +47,16 @@ echo "filetype plugin indent on" >> .vimrc;
 
 # Oracle OCI Installation
 # https://github.com/mariano/node-db-oracle
-sudo apt-get install -y alien;
-sudo alien -i /tmp/shared_folder/oracle-instantclient11.2-basic-11.2.0.3.0-1.x86_64.rpm;
-sudo alien -i /tmp/shared_folder/oracle-instantclient11.2-sqlplus-11.2.0.3.0-1.x86_64.rpm;
-sudo alien -i /tmp/shared_folder/oracle-instantclient11.2-devel-11.2.0.3.0-1.x86_64.rpm;
-sudo apt-get install libaio;
-export OCI_INCLUDE_DIR=/opt/instantclient/sdk/include/;
-export OCI_LIB_DIR=/opt/instantclient;
-npm install -g db-oracle;
-export LD_LIBRARY_PATH=/opt/instantclient;
+sudo apt-get install -y unzip;
+unzip /tmp/shared_folder/instantclient-basic-linux.x64-11.2.0.3.0.zip -d /opt/instantclient;
+unzip /tmp/shared_folder/instantclient-sdk-linux.x64-11.2.0.3.0.zip -d /opt/instantclient;
+unzip /tmp/shared_folder/instantclient-sqlplus-linux.x64-11.2.0.3.0.zip -d /opt/instantclient;
+sudo ln -s /opt/instantclient/instantclient_11_2/libocci.so.11.1 /opt/instantclient/instantclient_11_2/libocci.so;
+sudo ln -s /opt/instantclient/instantclient_11_2/libclntsh.so.11.1 /opt/instantclient/instantclient_11_2/libclntsh.so;
+
+sudo apt-get install -y libaio1;
+echo 'export OCI_INCLUDE_DIR=/opt/instantclient/instantclient_11_2/sdk/include/' >> /etc/profile;
+echo 'export OCI_LIB_DIR=/opt/instantclient/instantclient_11_2/' >> /etc/profile;
+sudo npm install -g db-oracle;
+export LD_LIBRARY_PATH=/opt/instantclient/instantclient_11_2/;
 
