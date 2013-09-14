@@ -13,8 +13,8 @@
 
 Vagrant.configure("2") do |config|
 
-    config.vm.box = "lucid32"
-    config.vm.box_url = "http://files.vagrantup.com/lucid32.box"
+    config.vm.box = "lucid64"
+    config.vm.box_url = "http://files.vagrantup.com/lucid64.box"
     config.vm.hostname = "hubot.local"
     config.vm.network :private_network, ip: "10.0.1.20"
 

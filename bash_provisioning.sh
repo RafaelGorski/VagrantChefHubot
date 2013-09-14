@@ -51,12 +51,20 @@ sudo apt-get install -y unzip;
 unzip /tmp/shared_folder/instantclient-basic-linux.x64-11.2.0.3.0.zip -d /opt/instantclient;
 unzip /tmp/shared_folder/instantclient-sdk-linux.x64-11.2.0.3.0.zip -d /opt/instantclient;
 unzip /tmp/shared_folder/instantclient-sqlplus-linux.x64-11.2.0.3.0.zip -d /opt/instantclient;
-sudo ln -s /opt/instantclient/instantclient_11_2/libocci.so.11.1 /opt/instantclient/instantclient_11_2/libocci.so;
-sudo ln -s /opt/instantclient/instantclient_11_2/libclntsh.so.11.1 /opt/instantclient/instantclient_11_2/libclntsh.so;
+sudo mv /opt/instantclient/instantclient_11_2/* /opt/instantclient;
+
+sudo ln -s /opt/instantclient/libocci.so.11.1 /opt/instantclient/libocci.so;
+sudo ln -s /opt/instantclient/libclntsh.so.11.1 /opt/instantclient/libclntsh.so;
 
 sudo apt-get install -y libaio1;
-echo 'export OCI_INCLUDE_DIR=/opt/instantclient/instantclient_11_2/sdk/include/' >> /etc/profile;
-echo 'export OCI_LIB_DIR=/opt/instantclient/instantclient_11_2/' >> /etc/profile;
+echo 'export OCI_INCLUDE_DIR=/opt/instantclient/sdk/include/' >> /etc/profile;
+echo 'export OCI_LIB_DIR=/opt/instantclient' >> /etc/profile;
+echo 'export LD_LIBRARY_PATH=/opt/instantclient' >> /etc/profile;
+echo 'export NODE_PATH=/usr/local/lib/node_modules' >> /etc/profile;
+
+sudo npm install -g node-gyp;
 sudo npm install -g db-oracle;
-export LD_LIBRARY_PATH=/opt/instantclient/instantclient_11_2/;
+
+#git clone https://github.com/nearinfinity/node-oracle.git;
+#npm install node-oracle;
 
