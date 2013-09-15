@@ -2,12 +2,14 @@
 
 It is Hubot using Skype ready to go!!!
 An Easy way to use hubot in your company.
+Enable easy and quick development of new hubot commands.
 
 = What it does?
 
 Generate a VM with Hubot and Skype available out of box.
-Install all OS dependencies like git, python, vim...
+Install all OS dependencies like git, python, node, oracle node, coffeescript, vim, vim modules for development.
 Move all files to right place according to installation guides.
+the progress are available no {trello}[http://bit.ly/18opUDY]: http://bit.ly/18opUDY
 
 = PRE REQUIREMENTS installed in your machine:
 
@@ -26,7 +28,7 @@ instantclient-basic-linux.x64-11.2.0.3.0.zip
 instantclient-sdk-linux.x64-11.2.0.3.0.zip
 instantclient-sqlplus-linux.x64-11.2.0.3.0.zip
 
-Need a oracle account
+Need a oracle account to download the files.
 
 = Installation
 
@@ -47,16 +49,22 @@ After you clone this repository download the following Cookbooks:
 
 TIP: You can run a helper script cookbooks/cookbooks-update.sh or bat
 
+For windows I recommend to use powershell.
+
 Starting the Vagrant VM:
 
   #If Windows start Xming client.
 
   vagrant up;
+  # wait several minutes for fist time.
+
+  # For windows use putty with x11 enabled.
+  
   ssh -Y vagrant@10.0.1.20;
   #passwd: vagrant
 
   skype &;
-
+  # wait skype gui lauch.
   #login to skype client, before start hubot
 
   cd hubot;
@@ -83,11 +91,8 @@ If you want to start from scratch use the following
 - Windows 7
 
 == TODO
-  install extra pkg https://github.com/github/hubot-scripts.git
-  make trello board for management new improvements
   install hubot-control
   automatic cookbooks dependency
-  FAQ
 
 = LICENSE and AUTHOR:
 

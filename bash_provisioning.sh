@@ -3,6 +3,7 @@
 # Provisioning using bash for vagrant.
 # Update the apt repositories and fetch and install skype and dependencies
 # For dev proposals vim and vim bundles are available
+# Node Libraries availables: node-oracle
 #
 # Author: Rafael Gorski ( @GorskiRafael |  rafaelgorski.com )
 # References:
@@ -23,9 +24,18 @@ sudo easy_install Skype4Py;
 git clone https://github.com/netpro2k/hubot-skype.git;
 cp hubot-skype/src/* /usr/local/lib/node_modules/hubot/src/adapters;
 cp -rf hubot-skype/ /usr/local/lib/node_modules/hubot/node_modules;
+# TODO: remove hubot-skype
+
+# install hubot scripts
+git clone https://github.com/github/hubot-scripts.git;
+mv hubot-scripts/src/scripts/* /usr/local/lib/node_modules/hubot/src/scripts;
+# TODO: remove hubot-scripts
 
 #navigation helper
 ln -s /usr/local/lib/node_modules/hubot;
+
+# command from hubot to create your own hubot name, botbot for instace
+echo 'bin/hubot --create ../botbot' > usr/local/lib/node_modules/create-own-hubot; 
 
 #vim
 sudo apt-get install -y vim;
@@ -61,10 +71,54 @@ echo 'export OCI_INCLUDE_DIR=/opt/instantclient/sdk/include/' >> /etc/profile;
 echo 'export OCI_LIB_DIR=/opt/instantclient' >> /etc/profile;
 echo 'export LD_LIBRARY_PATH=/opt/instantclient' >> /etc/profile;
 echo 'export NODE_PATH=/usr/local/lib/node_modules' >> /etc/profile;
+echo 'export PATH=$PATH:/opt/instantclient/' >> /etc/profile;
 
 sudo npm install -g node-gyp;
 sudo npm install -g db-oracle;
 
-#git clone https://github.com/nearinfinity/node-oracle.git;
-#npm install node-oracle;
+# installing package hubot-script dependecies
+sudo npm install -g xml2js;
+sudo npm install -g redis;
+sudo npm install -g scraper;
+sudo npm install -g soupselect;
+sudo npm install -g htmlparser;
+sudo npm install -g jsdom;
+sudo npm install -g underscore;
+sudo npm install -g phantom;
+sudo npm install -g cheerio;
+sudo npm install -g sprintf;
+sudo npm install -g bang;
+sudo npm install -g shellwords;
+sudo npm install -g moment;
+sudo npm install -g twit;
+sudo npm install -g githubot;
+sudo npm install -g ntwitter;
+sudo npm install -g sandbox;
+sudo npm install -g cradle;
+sudo npm install -g request;
+sudo npm install -g chess;
+sudo npm install -g yelp;
+sudo npm install -g date-utils; 
+sudo npm install -g tumblrbot; 
+sudo npm install -g hubucket;
+sudo npm install -g mongodb;
+sudo npm install -g wolfram;
+sudo npm install -g gitio;
+sudo npm install -g scribe-node;
+sudo npm install -g prowler;
+sudo npm install -g underscore.string;
+sudo npm install -g oauth;
+sudo npm install -g nodepie;
+
+
+
+
+
+
+
+
+
+
+
+
 
