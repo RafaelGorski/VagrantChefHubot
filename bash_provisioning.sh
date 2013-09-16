@@ -16,6 +16,9 @@ sudo apt-get update;
 sudo apt-get install -y skype;
 sudo apt-get install -y curl;
 
+# fontconfig needed to render X11
+sudo apt-get install -y fontconfig-config;
+
 # Skype connector for Hubot
 sudo apt-get install -y python-setuptools;
 sudo easy_install Skype4Py;
@@ -27,8 +30,8 @@ cp -rf hubot-skype/ /usr/local/lib/node_modules/hubot/node_modules;
 # TODO: remove hubot-skype
 
 # install hubot scripts
-git clone https://github.com/github/hubot-scripts.git;
-mv hubot-scripts/src/scripts/* /usr/local/lib/node_modules/hubot/src/scripts;
+#git clone https://github.com/github/hubot-scripts.git;
+#mv hubot-scripts/src/scripts/* /usr/local/lib/node_modules/hubot/src/scripts;
 # TODO: remove hubot-scripts
 
 #navigation helper
@@ -77,48 +80,45 @@ sudo npm install -g node-gyp;
 sudo npm install -g db-oracle;
 
 # installing package hubot-script dependecies
-sudo npm install -g xml2js;
-sudo npm install -g redis;
-sudo npm install -g scraper;
-sudo npm install -g soupselect;
-sudo npm install -g htmlparser;
-sudo npm install -g jsdom;
-sudo npm install -g underscore;
-sudo npm install -g phantom;
-sudo npm install -g cheerio;
-sudo npm install -g sprintf;
-sudo npm install -g bang;
-sudo npm install -g shellwords;
-sudo npm install -g moment;
-sudo npm install -g twit;
-sudo npm install -g githubot;
-sudo npm install -g ntwitter;
-sudo npm install -g sandbox;
-sudo npm install -g cradle;
-sudo npm install -g request;
-sudo npm install -g chess;
-sudo npm install -g yelp;
-sudo npm install -g date-utils; 
-sudo npm install -g tumblrbot; 
-sudo npm install -g hubucket;
-sudo npm install -g mongodb;
-sudo npm install -g wolfram;
-sudo npm install -g gitio;
-sudo npm install -g scribe-node;
-sudo npm install -g prowler;
-sudo npm install -g underscore.string;
-sudo npm install -g oauth;
-sudo npm install -g nodepie;
-
-
-
-
-
-
-
-
-
-
-
-
+#sudo npm install -g xml2js;
+#sudo npm install -g redis;
+#sudo npm install -g scraper;
+#sudo npm install -g soupselect;
+#sudo npm install -g htmlparser;
+#sudo npm install -g jsdom;
+#sudo npm install -g underscore;
+#sudo npm install -g phantom;
+#sudo npm install -g cheerio;
+#sudo npm install -g sprintf;
+#sudo npm install -g bang;
+#sudo npm install -g shellwords;
+#sudo npm install -g moment;
+#sudo npm install -g twit;
+#sudo npm install -g githubot;
+#sudo npm install -g ntwitter;
+#sudo npm install -g sandbox;
+#sudo npm install -g cradle;
+#sudo npm install -g request;
+#sudo npm install -g chess;
+#sudo npm install -g yelp;
+#sudo npm install -g date-utils; 
+#sudo npm install -g tumblrbot; 
+#sudo npm install -g hubucket;
+#sudo npm install -g mongodb;
+#sudo npm install -g wolfram;
+#sudo npm install -g gitio;
+#sudo npm install -g scribe-node;
+#sudo npm install -g prowler;
+#sudo npm install -g underscore.string;
+#sudo npm install -g oauth;
+#sudo npm install -g nodepie;
+#sudo npm install -g pypi;
+#sudo npm install -g validator;
+#sudo npm install -g handlebars;
+#sudo npm install -g big-integer;
+#sudo npm install -g node-xmpp;
+#sudo npm install -g domain;
+#sudo npm install -g aws2js;
+#sudo npm install -g sh;
+#sudo npm install -g xml2json;
 
