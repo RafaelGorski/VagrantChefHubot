@@ -63,6 +63,8 @@ Starting the Vagrant VM:
   ssh -Y vagrant@10.0.1.20;
   #passwd: vagrant
 
+  # From this point the commands are inside the VM.
+
   skype &;
   # wait skype gui lauch.
   #login to skype client, before start hubot
