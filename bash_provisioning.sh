@@ -29,10 +29,9 @@ cp hubot-skype/src/* /usr/local/lib/node_modules/hubot/src/adapters;
 cp -rf hubot-skype/ /usr/local/lib/node_modules/hubot/node_modules;
 # TODO: remove hubot-skype
 
-# install hubot scripts
-#git clone https://github.com/github/hubot-scripts.git;
-#mv hubot-scripts/src/scripts/* /usr/local/lib/node_modules/hubot/src/scripts;
-# TODO: remove hubot-scripts
+# install jira hubot scripts
+curl -Sso /usr/local/lib/node_modules/hubot/src/scripts/jira.coffee  https://raw.github.com/github/hubot-scripts/master/src/scripts/jira.coffee;
+curl -Sso /usr/local/lib/node_modules/hubot/src/scripts/jira-issues.coffee  https://raw.github.com/github/hubot-scripts/master/src/scripts/jira-issues.coffee;
 
 #navigation helper
 ln -s /usr/local/lib/node_modules/hubot;
