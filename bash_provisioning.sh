@@ -77,6 +77,7 @@ echo 'export PATH=$PATH:/opt/instantclient/' >> /etc/profile;
 
 sudo npm install -g node-gyp;
 sudo npm install -g db-oracle;
+sudo npm install -g karma;
 
 # installing package hubot-script dependecies
 #sudo npm install -g xml2js;
