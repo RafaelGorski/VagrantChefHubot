@@ -2,6 +2,10 @@
 # Configuration file to set parameters and packages on the VM produced by Vagrant
 # Author: Rafael Gorski (rafaelgorski.com)
 #
+# Versions used:
+#   Vagrant 1.3.3
+#   VMBox 4.2.18
+#
 # Before vagrant up:
 #   mkdir cookbooks
 #   cd cookbooks
@@ -30,6 +34,4 @@ Vagrant.configure("2") do |config|
 
     config.vm.synced_folder "shared_folder", "/tmp/shared_folder"
     config.vm.provision :shell, :path => "bash_provisioning.sh"
-    config.ssh.max_tries = "50000"
-    #config.ssh.timeout = "3000000"
 end
